@@ -1,11 +1,26 @@
-- name: Create VM with defaults
-  azure_rm_virtualmachine:
-    resource_group: Testing
-    name: testvm10
-    admin_username: chouseknecht
-    admin_password: <your password here>
-    image:
-      offer: CentOS
-      publisher: OpenLogic
-      sku: '7.1'
-      version: latest
+- name: Install Services on Vmware Linux VM
+  hosts: all
+  gather_facts: True
+
+  tasks:
+  - name: install "{{ service }}"
+    yum:
+      name: "{{ service }}"
+      state: latest
+  - name: start "{{ service }}" Service
+    service:
+      name: "{{ service }}"
+      state: started
+      enabled: yes
+
+  - name: Create VM with defaults
+    azure_rm_virtualmachine:
+      resource_group: Testing
+      name: testvm10
+      admin_username: chouseknecht
+      admin_password: <your password here>
+      image:
+        offer: CentOS
+        publisher: OpenLogic
+        sku: '7.1'
+        version: latest
