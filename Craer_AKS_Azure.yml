@@ -10,9 +10,6 @@
         dns_prefix: akstest
         linux_profile:
           admin_username: azureuser
-        service_principal:
-          client_id: "{{ client_id }}"
-          client_secret: "{{ client_secret }}"
         agent_pool_profiles:
           - name: default
             count: 2
