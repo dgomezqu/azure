@@ -10,6 +10,7 @@
         dns_prefix: akstest
         linux_profile:
           admin_username: azureuser
+          ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDA1rVbTe7JLAMmbjK2evu4XFf9UqKQlHHg9luvBFkEfYW9NeA3eysGO0E+bGVrTvhtHGvuLBQ9h2ixI8VEpcrGIkAntfT4fC0EnP/KjWBpwiWKHb6gmhRYhucywGM+h9/lOB4oRHLUlC3NCe40xIUqglE0Osqb7tP6dg3z6S1aTXpMKiWp1h78TbnenyDhxtdlER8Xka+sr+vkEzqHGArMaeozNPNt0MZIvL3+6OEwswPMi3Joy92+gJhwEPNOc3dm83S+Gs+8nVDhvMS9wGyc019FJBY0j2IxwVf2CQJK9HfqttgytT/cRee7jNShK5jI5uAA1ICtRiEPulR9WSul dgomez@Davids-MacBook-Pro.local
         agent_pool_profiles:
           - name: default
             count: 2
