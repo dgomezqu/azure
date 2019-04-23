@@ -5,4 +5,4 @@
     - name: Create a resource group
       azure_rm_resourcegroup:
         name: Testing
-location: East US
+        location: East US
